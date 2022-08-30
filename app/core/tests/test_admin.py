@@ -5,3 +5,4 @@ from django.test import client
 
 
 class AdminSiteTest(TestCase):
+    pass
