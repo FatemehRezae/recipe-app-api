@@ -1,10 +1,14 @@
-from django.contrib.auth import get_user_model
+"""
+Tests for the Django admin modifications.
+"""
 from django.test import TestCase
+from django.contrib.auth import get_user_model
+
 from django.urls import reverse
 from django.test import Client
 
 
-class AdminSiteTest(TestCase):
+class AdminSiteTests(TestCase):
     def setUp(self):
         self.client = Client()
         self.admin_user = get_user_model().objects.create_superuser(

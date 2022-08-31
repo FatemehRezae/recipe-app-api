@@ -1,4 +1,4 @@
-FROM python:3.10.6-alpine3.16 
+FROM python:3.10.6-alpine3.16
 LABEL maintainer="zaferoon.com"
 
 ENV PYTHONUNBUFFERED 1
@@ -17,7 +17,7 @@ RUN python -m venv /py && \
     build-base postgresql-dev musl-dev && \
     /py/bin/pip install -r /tmp/requirements.txt && \
     if [ $DEV = "true" ]; \
-    then /py/bin/pip install -r /tmp/requirements.dev.txt ;\
+    then /py/bin/pip install -r /tmp/requirements.dev.txt ; \
     fi && \
     rm -rf /tmp && \
     apk del .tmp-build-deps && \
