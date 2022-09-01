@@ -22,8 +22,9 @@ class UserAdmin(BaseUserAdmin):
                     'is_active',
                     'is_staff',
                     'is_superuser',
-                ),
-            }),
+                )
+            }
+        ),
         (_('Important dates'), {'fields': ('last_login',)}),
     )
     readonly_fields = ['last_login']
@@ -39,8 +40,7 @@ class UserAdmin(BaseUserAdmin):
                 'is_staff',
                 'is_superuser',
             )
-        }
-        ),
+        }),
     )
 
 
